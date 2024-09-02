@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+              .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.navbar-right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar-right li {
+  margin-right: 20px;
+}
+
+.navbar-right a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-right a:hover {
+  color: #ccc;
+}
+
+        .ream {
+            display: flex;
+            gap: 50px;
+        }
+
+        h3 {
+            color: white;
+            font-weight: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        #boarder {
+            border: 3px solid whitesmoke;
+            height: 200px;
+            width: 450px;
+            border-radius: 5px;
+        }
+
+        #input {
+            display: flex;
+            gap: 10px;
+            width: 90px;
+            height: 50px;
+            position: relative;
+            top: 10px;
+            left: 30px;
+            font-size: large;
+
+        }
+
+        #mathbutt {
+            display: flex;
+            position: relative;
+            top: 55px;
+            left: 120px;
+            width: 40px;
+            gap: 30px;
+            font-weight: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        span {
+            color: aliceblue;
+        }
+
+        #output {
+            position: relative;
+            top: 2rem;
+        }
+
+        #loan {
+            display: flex;
+            border: 1px solid whitesmoke;
+            width: 450px;
+        }
+
+        #in {
+            display: flex;
+            height: 50px;
+            width: 90px;
+            position: relative;
+            top: 10px;
+            left: 30px;
+            font-size: large;
+            gap: 10px;
+        }
+
+        #butt {
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+
+        h2 {
+            color: aliceblue;
+            position: relative;
+            top: 8rem;
+            right: 7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <h1>Assignment</h1>
+          <!-- <img src="icon.png" alt="Icon" class="navbar-icon"> -->
+        </div>
+        <div class="navbar-right">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#">Day1</a></li>
+            <li><a href="variableDay2.html">Day2</a></li>
+            <li><a href="Day3.html">Day3</a></li>
+            <li><a href="day4.html">Day4</a></li>
+            <li><a href="day5.html">Day5</a></li>
+            <li><a href="day6.html">Day6</a></li>
+            <li><a href="#day7.html">Day7</a></li>
+            <li><a href="#">Day8</a></li>
+            <li><a href="#">Day9</a></li>
+            <li><a href="#">Day10</a></li>
+            <li><a href="#">Day11</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class = "container">
+    <div class="ream">
+        <div id="boarder">
+            <div id="input">
+                <input type="text" id="input1">
+                <span id="spanclass"></span>
+                <input type="text" id="input2">
+            </div>
+            <div id="mathbutt">
+                <button id="multi" onclick="multiy()">*</button>
+                <button id="divid" onclick="diviy()">/</button>
+                <button id="add" onclick="plusy()">+</button>
+                <button id="minus" onclick="miny()">-</button>
+            </div><br><br>
+            <h3 id="output"></h3>
+        </div>
+        <div id="loan">
+            <div id="in">
+                <input type="text" id="in1">
+                <span id="spanclass"></span>
+                <input type="text" id="in2">
+            </div>
+            <div id="butt">
+                <button onclick="loans()">Amount</button>
+            </div>
+            <h2 id="out"></h2>
+        </div>
+    </div>
+    <script src="day6.js"> </script>
+</body>
+
+</html>
