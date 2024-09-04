@@ -7,44 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-              .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 1em;
-}
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+        }
 
-.navbar-left {
-  display: flex;
-  align-items: center;
-}
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
 
-.navbar-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
+        .navbar-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
 
-.navbar-right ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-.navbar-right li {
-  margin-right: 20px;
-}
+        .navbar-right ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
 
-.navbar-right a {
-  color: #fff;
-  text-decoration: none;
-}
+        .navbar-right li {
+            margin-right: 20px;
+        }
 
-.navbar-right a:hover {
-  color: #ccc;
-}
+        .navbar-right a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar-right a:hover {
+            color: #ccc;
+        }
 
         .ream {
             display: flex;
@@ -62,7 +63,7 @@
         }
 
         #boarder {
-            border: 3px solid whitesmoke;
+            border: 3px solid rgb(0, 0, 0);
             height: 200px;
             width: 450px;
             border-radius: 5px;
@@ -106,7 +107,7 @@
 
         #loan {
             display: flex;
-            border: 1px solid whitesmoke;
+            border: 1px solid rgb(0, 0, 0);
             width: 450px;
         }
 
@@ -128,10 +129,38 @@
         }
 
         h2 {
-            color: aliceblue;
+            color: rgb(255, 255, 255);
             position: relative;
             top: 8rem;
             right: 7rem;
+        }
+
+        #investment {
+            padding-left: 11rem;
+            padding-top: 4rem;
+        }
+
+        #invest {
+            margin-top: 3rem;
+        }
+
+        #output10 {
+            padding-left: 8rem;
+            padding-bottom: 15rem;
+        }
+
+        #investment-calculator {
+            display: flex;
+            border: 1px solid rgb(0, 0, 0);
+            width: 450px;
+        }
+        input {
+           background-color: yellow;
+           border-radius: 45px;
+        }
+        button{
+            background-color: yellowgreen;
+            border-radius: 50px;
         }
     </style>
 </head>
@@ -140,54 +169,65 @@
     <nav class="navbar">
         <div class="navbar-left">
             <h1>Assignment</h1>
-          <!-- <img src="icon.png" alt="Icon" class="navbar-icon"> -->
+            <!-- <img src="icon.png" alt="Icon" class="navbar-icon"> -->
         </div>
         <div class="navbar-right">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Day1</a></li>
-            <li><a href="variableDay2.html">Day2</a></li>
-            <li><a href="Day3.html">Day3</a></li>
-            <li><a href="day4.html">Day4</a></li>
-            <li><a href="day5.html">Day5</a></li>
-            <li><a href="day6.html">Day6</a></li>
-            <li><a href="#day7.html">Day7</a></li>
-            <li><a href="#">Day8</a></li>
-            <li><a href="#">Day9</a></li>
-            <li><a href="#">Day10</a></li>
-            <li><a href="#">Day11</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Day1</a></li>
+                <li><a href="variableDay2.html">Day2</a></li>
+                <li><a href="Day3.html">Day3</a></li>
+                <li><a href="day4.html">Day4</a></li>
+                <li><a href="day5.html">Day5</a></li>
+                <li><a href="day6.html">Day6</a></li>
+                <li><a href="#day7.html">Day7</a></li>
+                <li><a href="#">Day8</a></li>
+                <li><a href="#">Day9</a></li>
+                <li><a href="#">Day10</a></li>
+                <li><a href="#">Day11</a></li>
+            </ul>
         </div>
-      </nav>
-    <div class = "container">
-    <div class="ream">
-        <div id="boarder">
-            <div id="input">
-                <input type="text" id="input1">
-                <span id="spanclass"></span>
-                <input type="text" id="input2">
+    </nav>
+    <div class="container">
+        <div class="ream">
+            <div id="boarder">
+                <div id="input">
+                    <input type="text" id="input1">
+                    <span id="spanclass"></span>
+                    <input type="text" id="input2">
+                </div>
+                <div id="mathbutt">
+                    <button id="multi" onclick="multiy()">*</button>
+                    <button id="divid" onclick="diviy()">/</button>
+                    <button id="add" onclick="plusy()">+</button>
+                    <button id="minus" onclick="miny()">-</button>
+                </div><br><br>
+                <h3 id="output"></h3>
             </div>
-            <div id="mathbutt">
-                <button id="multi" onclick="multiy()">*</button>
-                <button id="divid" onclick="diviy()">/</button>
-                <button id="add" onclick="plusy()">+</button>
-                <button id="minus" onclick="miny()">-</button>
-            </div><br><br>
-            <h3 id="output"></h3>
+            <div id="loan">
+                <div id="in">
+                    <input type="text" id="in1">
+                    <span id="spanclass"></span>
+                    <input type="text" id="in2">
+                </div>
+                <div id="butt">
+                    <button onclick="loans()">Amount</button>
+                </div>
+                <h2 id="out"></h2>
+            </div>
+            <div id="investment-calculator">
+                <div id="input">
+                    <input type="text" id="invested">
+
+                    <input type="text" id="times">
+                </div>
+                <div id="butt">
+                    <button id="loa" onclick="invest()">Amount</button>
+                </div>
+                <h2 id="ok"></h2>
+            </div>
         </div>
-        <div id="loan">
-            <div id="in">
-                <input type="text" id="in1">
-                <span id="spanclass"></span>
-                <input type="text" id="in2">
-            </div>
-            <div id="butt">
-                <button onclick="loans()">Amount</button>
-            </div>
-            <h2 id="out"></h2>
-        </div>
-    </div>
-    <script src="day6.js"> </script>
+        <script src="day6.js"> </script>
 </body>
 
 </html>

@@ -9,6 +9,10 @@ let sum1 = document.getElementById("in1")
 let sum2 = document.getElementById("in2")
 let amoun = document.getElementById("Amount")
 let outin = document.getElementById("out")
+let ini1 = document.getElementById("invested")
+let ini2 = document.getElementById("times")
+let comot = document.getElementById("ok")
+let leo = document.getElementById("loa")
 
 function plusy () {
     let input1 = parseInt(input_1.value);
@@ -66,4 +70,11 @@ function loans (){
     let time = parseInt(in2.value);
     let aountt = 15 / 100 * cash + cash;
     document.getElementById('out').textContent = `you are paying us ${aountt}`;
+}
+
+function invest (){
+    let price = parseInt(ini1.value);
+    let second = parseInt(ini2.value);
+    let final = 15/100 * price + price;
+    document.getElementById('ok').textContent = `you are going to collect ${final} within ${second} month`;
 }
