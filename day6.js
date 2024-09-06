@@ -78,3 +78,6 @@ function invest (){
     let final = 15/100 * price + price;
     document.getElementById('ok').textContent = `you are going to collect ${final} within ${second} month`;
 }
+
+
+
