@@ -9,8 +9,8 @@
   <style>
     body {
       background-color: rgb(0, 0, 0);
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      font-size: large;
+      /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: large; */
     }
 
     input {
@@ -23,7 +23,7 @@
       font-size: larger;
     }
 
-    button {
+    .butto {
       background-color: brown;
       border-radius: 15px;
       height: 70px;
@@ -59,68 +59,69 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Assignment</a>
-      <butto class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="#">Assignment</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">day1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="variableDay2.html">day 2</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Day3.html">day 3 </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="day4.html">day 4</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="day5.html">day 5 </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="day6.html">day 6</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="day7.html">day 7</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">day 8</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">day 9 </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">day 10 </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">day 11 </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">day 12 </a>
-            </li>
-          </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">day1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="variableDay2.html">day 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Day3.html">day 3 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="day4.html">day 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="day5.html">day 5 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="day6.html">day 6</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="day7.html">day 7</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="day.8.html">day 8</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">day 9 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">day 10 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">day 11 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">day 12 </a>
+                </li>
+            </ul>
 
         </div>
     </div>
-  </nav>
+</nav>
   <section>
     <div class="gess">
       <h1>Guess between 1-10</h1>
       <input type="number" id="guessinput">
-      <button onclick="playGame()">Guess</button>
+      <button  class="butto" onclick="playGame()">Guess</button>
       <p id="result"></p>
     </div><br><br>
     <div class="makk">
       <h1>To do list</h1>
       <input type="text" id="getName" value="kahmi">
-      <button id="add" onclick="addListItem()">add</button>
+      <button id="add" class="butto"  onclick="addListItem()">add</button>
       <ul id="t0List">
 
       </ul>
