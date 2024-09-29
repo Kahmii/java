@@ -2,281 +2,231 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
         .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
+            background-color: #000;
+            border-bottom: 1px solid #fff;
         }
 
-        .navbar-left {
-            display: flex;
-            align-items: center;
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 0 10px;
         }
 
-        .navbar-icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
+        .nav-link:hover {
+            color: #888 !important;
         }
 
-        .navbar-right ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
+        .navbar-toggler {
+            border: none;
         }
 
-        .navbar-right li {
-            margin-right: 20px;
+        .navbar-toggler-icon {
+            background-color: #fff;
         }
 
-        .navbar-right a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .navbar-right a:hover {
-            color: #ccc;
+        .cont {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 10px;
+            color: #000;
         }
 
         .ream {
             display: flex;
-            gap: 50px;
+            gap: 20px;
+            justify-content: center;
         }
 
-        h3 {
-            color: white;
-            font-weight: bolder;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        .calc-container {
+            flex: 1 1 300px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        body {
-            background-color: black;
+        .calc-container h2 {
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #000;
         }
 
-        #boarder {
-            border: 3px solid rgb(0, 0, 0);
-            height: 200px;
-            width: 450px;
-            border-radius: 5px;
-        }
-
-        #input {
+        .input-group {
             display: flex;
+            flex-direction: row;
             gap: 10px;
-            width: 90px;
-            height: 50px;
-            position: relative;
-            top: 10px;
-            left: 30px;
-            font-size: large;
-
+            justify-content: center;
         }
 
-        #mathbutt {
-            display: flex;
-            position: relative;
-            top: 55px;
-            left: 120px;
-            width: 40px;
-            gap: 30px;
-            font-weight: bolder;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        button {
+        .input-field {
             padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
         }
 
-        span {
-            color: aliceblue;
-        }
-
-        #output {
-            position: relative;
-            top: 2rem;
-        }
-
-        #loan {
+        .button-group {
             display: flex;
-            border: 1px solid rgb(0, 0, 0);
-            width: 450px;
-        }
-
-        #in {
-            display: flex;
-            height: 50px;
-            width: 90px;
-            position: relative;
-            top: 10px;
-            left: 30px;
-            font-size: large;
             gap: 10px;
-        }
-        #out{
-            padding-top: 10px;
-        }
-
-        #butt {
-            position: relative;
-            top: 100px;
-            left: 100px;
+            justify-content: center;
+            margin-top: 10px;
         }
 
-        h2 {
-            color: rgb(255, 255, 255);
-            position: relative;
-            top: 8rem;
-            right: 7rem;
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
         }
 
-        #investment {
-            padding-left: 11rem;
-            padding-top: 4rem;
+        .button:hover {
+            background-color: #333;
         }
 
-        #invest {
-            margin-top: 3rem;
+        .output {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
         }
 
-        #output10 {
-            padding-left: 8rem;
-            padding-bottom: 15rem;
-        }
-
-        #investment-calculator {
-            display: flex;
-            border: 1px solid rgb(0, 0, 0);
-            width: 450px;
-        }
-
-        input {
-            background-color: yellow;
-            border-radius: 45px;
-        }
-
-        button {
-            background-color: yellowgreen;
-            border-radius: 50px;
-        }
+        /* Media query for small screens */
         @media (max-width: 768px) {
-  .ream {
-           flex-direction: column;
-  }
-  #investment-calculator{
-          padding-top:5rem;
-  }
-}
+            .ream {
+                flex-direction: column;
+            }
 
-       
+            .calc-container {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Assignment</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      <a class="nav-link" href="index.html">day1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">day1</a>
+                      <a class="nav-link" href="variableDay2.html">day 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="variableDay2.html">day 2</a>
+                      <a class="nav-link" href="Day3.html">day 3 </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Day3.html">day 3 </a>
+                      <a class="nav-link" href="day4.html">day 4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="day4.html">day 4</a>
+                      <a class="nav-link" href="day5.html">day 5 </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="day5.html">day 5 </a>
+                      <a class="nav-link" href="day6.html">day 6</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="day6.html">day 6</a>
+                      <a class="nav-link" href="day7.html">day 7</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="day7.html">day 7</a>
+                      <a class="nav-link" href="day.8.html">day 8</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="day.8.html">day 8</a>
+                      <a class="nav-link" href="day9.html">day 9 </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">day 9 </a>
+                      <a class="nav-link" href="#">day 10 </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">day 10 </a>
+                      <a class="nav-link" href="#">day 11 </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">day 11 </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">day 12 </a>
+                      <a class="nav-link" href="#">day 12 </a>
                     </li>
                 </ul>
-
             </div>
         </div>
     </nav>
+
     <div class="cont">
         <div class="ream">
-            <div id="boarder">
-                <div id="input">
-                    <input type="text" id="input1">
+            <!-- Calculator -->
+            <div class="calc-container">
+                <h2>Calculator</h2>
+                <div class="input-group">
+                    <input type="text" id="input1" class="input-field" placeholder="Enter number">
                     <span id="spanclass"></span>
-                    <input type="number" id="input2">
+                    <input type="text" id="input2" class="input-field" placeholder="Enter number">
                 </div>
-                <div id="mathbutt">
-                    <button id="multi" onclick="multiy()">*</button>
-                    <button id="divid" onclick="diviy()">/</button>
-                    <button id="add" onclick="plusy()">+</button>
-                    <button id="minus" onclick="miny()">-</button>
-                </div><br><br>
-                <h3 id="output"></h3>
+                <div class="button-group">
+                    <button id="multi" onclick="multiy()" class="button">*</button>
+                    <button id="divid" onclick="diviy()" class="button">/</button>
+                    <button id="add" onclick="plusy()" class="button">+</button>
+                    <button id="minus" onclick="miny()" class="button">-</button>
+                </div>
+                <h3 id="output" class="output"></h3>
             </div>
-            <div id="loan">
-                <div id="in">
-                    <input type="text" id="in1">
-                    <span id="spanclass"></span>
-                    <input type="text" id="in2">
-                </div>
-                <div id="butt">
-                    <button onclick="loans()">Loan</button>
-                </div>
-                <h2 id="out"></h2>
-            </div>
-            <div id="investment-calculator">
-                <div id="input">
-                    <input type="text" id="invested" label="invest">
 
-                    <input type="text" id="times" label="month">
+            <!-- Loan Calculator -->
+            <div class="calc-container">
+                <h2>Loan Calculator</h2>
+                <div class="input-group">
+                    <input type="text" id="in1" class="input-field" placeholder="Loan amount">
+                    <span id="spanclass"></span>
+                    <input type="text" id="in2" class="input-field" placeholder="Interest rate">
                 </div>
-                <div id="butt">
-                    <button id="loa" onclick="invest()">Invest</button>
+                <div class="button-group">
+                    <button onclick="loans()" class="button">Calculate</button>
                 </div>
-                <h2 id="ok"></h2>
+                <h3 id="out" class="output"></h3>
+            </div>
+
+            <!-- Investment Calculator -->
+            <div class="calc-container">
+                <h2>Investment Calculator</h2>
+                <div class="input-group">
+                    <input type="text" id="invested" class="input-field" placeholder="Investment amount">
+                    <input type="text" id="times" class="input-field" placeholder="Duration">
+                </div>
+                <div class="button-group">
+                    <button id="loa" onclick="invest()" class="button">Calculate</button>
+                </div>
+                <h3 id="ok" class="output"></h3>
             </div>
         </div>
     </div>
-    <script src="day6.js"> </script>
+
+    <script src="day6.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

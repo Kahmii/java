@@ -14,3 +14,6 @@ function display() {
      ul.innerHTML += `<li>${password}</li>`
 }
 AddButton.addEventListener("click", display)
+
+
+

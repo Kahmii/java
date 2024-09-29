@@ -28,13 +28,13 @@ console.log(getCorrectDate.getMilliseconds());
 let greeting = document.getElementById("greet")
 let yourname = prompt("what is your name")
 
-if(getCorrectDate.getHours() <= 12){
-   greeting.innerText = `Good afternoon ${yourname.toUpperCase()}`
-}
-else if (getCorrectDate.getHours()<=12) {
+if(getCorrectDate.getHours() < 12){
    greeting.innerText = `Good morning ${yourname.toUpperCase()}`
 }
-else if(getCorrectDate.getHours()>=16){
+else if (getCorrectDate.getHours()<16) {
+   greeting.innerText = `Good afternoon ${yourname.toUpperCase()}`
+}
+else if(getCorrectDate.getHours()>16){
    greeting.innerText = `Good evening ${yourname.toUpperCase()}`
 }
 else{

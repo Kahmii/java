@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            background: white;
+            border: 1px solid rgb(17, 17, 17);
+            
+            border-radius: 8px;
+            width: 250px;
+            align-items: center;
+            padding: 50px;
+        }
+        input{
+            height: 25px;
+            width: 200px;
+            border-radius: 7px;
+        }
+        button{
+            width: 200px;
+            height: 25px;
+            border-radius: 7px;
+        }
+    </style>
 </head>
 <body>
    <ul id="ul"></ul>
@@ -13,6 +37,14 @@
    </ul>
    
    <h1 id="greet">Using object.assign to make wonders</h1>
+   <div class="container">
+    <form id="form">
+   <input type="text" id="text"><br><br>
+   <input type="password" id="password"><br><br>
+   <input type="submit" id="sub"><br><br>
+    </form>
+ 
+   </div>
    <script src="event.js"></script>
 </body>
 </html>

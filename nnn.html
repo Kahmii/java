@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .cont {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .ream {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .calc-container {
+            flex: 1 1 300px;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .input-field {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #3e8e41;
+        }
+
+        .output {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Media query for small screens */
+        @media (max-width: 768px) {
+            .ream {
+                flex-direction: column;
+            }
+            .calc-container {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="ream">
+            <!-- Calculator -->
+            <div class="calc-container">
+                <h2>Calculator</h2>
+                <div class="input-group">
+                    <input type="text" id="input1" class="input-field">
+                    <span id="spanclass"></span>
+                    <input type="text" id="input2" class="input-field">
+                </div>
+                <div class="button-group">
+                    <button id="multi" onclick="multiy()" class="button">*</button>
+                    <button id="divid" onclick="diviy()" class="button">/</button>
+                    <button id="add" onclick="plusy()" class="button">+</button>
+                    <button id="minus" onclick="miny()" class="button">-</button>
+                </div>
+                <h3 id="output" class="output"></h3>
+            </div>
+
+            <!-- Loan Calculator -->
+            <div class="calc-container">
+                <h2>Loan Calculator</h2>
+                <div class="input-group">
+                    <input type="text" id="in1" class="input-field">
+                    <span id="spanclass"></span>
+                    <input type="text" id="in2" class="input-field">
+                </div>
+                <div class="button-group">
+                    <button onclick="loans()" class="button">Calculate</button>
+                </div>
+                <h2 id="out" class="output"></h2>
+            </div>
+
+            <!-- Investment Calculator -->
+            <div class="calc-container">
+                <h2>Investment Calculator</h2>
+                <div class="input-group">
+                    <input type="text" id="invested" class="input-field">
+                    <input type="text" id="times" class="input-field">
+                </div>
+                <div class="button-group">
+                    <button id="loa" onclick="invest()" class="button">Calculate</button>
+                </div>
+                <h2 id="ok" class="output"></h2>
+            </div>
+        </div>
+    </div>
+    <script src="day6.js"></script>
+</body>
+</html>

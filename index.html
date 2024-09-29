@@ -4,23 +4,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <style>
-    body{
-      color: aliceblue;
-      background-color: black;
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
     }
-    h1{
-      border-bottom: 2px whitesmoke;
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #000;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 0 10px;
+    }
+
+    .nav-link:hover {
+      color: #888 !important;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #fff;
+    }
+
+    /* Remove the default navbar border */
+    .navbar {
+      border-bottom: none;
+    }
+
+    /* Section styling */
+    section {
+      background-color: #000;
+      padding: 40px;
+      margin: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      color: #fff;
+      text-align: center;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* Heading for ES versions */
+    h2 {
+      color: #fff;
+      font-size: 22px;
+      text-transform: uppercase;
+      margin-top: 30px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #888;
+    }
+
+    /* Paragraph styling */
+    .para {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid #333;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    /* Hover effect on list items */
+    li:hover {
+      color: #999;
+      transition: color 0.3s ease;
+    }
+
+    /* Media query for mobile responsiveness */
+    @media (max-width: 768px) {
+      section {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Assignment</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -33,87 +134,109 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">day1</a>
+            <a class="nav-link" href="index.html">Day 1</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="variableDay2.html">day 2</a>
+            <a class="nav-link" href="variableDay2.html">Day 2</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Day3.html">day 3 </a>
+            <a class="nav-link" href="Day3.html">Day 3</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="day4.html">day 4</a>
+            <a class="nav-link" href="day4.html">Day 4</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="day5.html">day 5 </a>
+            <a class="nav-link" href="day5.html">Day 5</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="day6.html">day 6</a>
+            <a class="nav-link" href="day6.html">Day 6</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="day7.html">day 7</a>
+            <a class="nav-link" href="day7.html">Day 7</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="day.8.html">day 8</a>
+            <a class="nav-link" href="day.8.html">Day 8</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">day 9 </a>
+            <a class="nav-link" href="day9.html">Day 9</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">day 10 </a>
+            <a class="nav-link" href="day10.html">Day 10</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">day 11 </a>
+            <a class="nav-link" href="#">Day 11</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">day 12 </a>
+            <a class="nav-link" href="#">Day 12</a>
           </li>
         </ul>
-
       </div>
     </div>
   </nav>
-  <section>
-    <h1>Introduction to java</h1>
-    <p>ES1<br>
-      First standardized version of JavaScript, published as ECMAScript 1 (ES1)
-      Introduced basic syntax, data types, and control structures
-    </p>
-    <p>ES2<br>
-      Minor updates and clarifications to ES1
-      Introduced minimal changes to ensure compatibility with emerging browsers
 
+  <section>
+    <h1>Introduction to JavaScript Versions</h1>
+
+    <h2>ES1</h2>
+    <p class="para">
+      <ul>
+        <li>First standardized version of JavaScript, published as ECMAScript 1 (ES1).</li>
+        <li>Introduced basic syntax, data types, and control structures.</li>
+      </ul>
     </p>
-    <p>ES3<br>
-      Significant updates, including:
-      - Regular expressions
-      - try-catch blocks for error handling
-      - String and Array methods
+
+    <h2>ES2</h2>
+    <p class="para">
+      <ul>
+        <li>Minor updates and clarifications to ES1.</li>
+        <li>Introduced minimal changes to ensure compatibility with emerging browsers.</li>
+      </ul>
     </p>
-    <p>ES4<br>
-      Proposed but never finalized due to disagreements among browser vendors
-      - Would have introduced significant changes, including:
-      - Classes and inheritance
-      - Optional static typing
+
+    <h2>ES3</h2>
+    <p class="para">
+      <ul>
+        <li>Regular expressions.</li>
+        <li>Try-catch blocks for error handling.</li>
+        <li>String and Array methods.</li>
+      </ul>
     </p>
-    <p>ES5<br>
-      - Introduced major updates, including:
-      - Strict mode for better error handling
-      - JSON support
-      - Array and Object methods (e.g., forEach, map, filter)
-      - Property getters and setters
+
+    <h2>ES4</h2>
+    <p class="para">
+      <ul>
+        <li>Would have introduced significant changes, including:</li>
+        <li>Classes and inheritance.</li>
+        <li>Optional static typing.</li>
+      </ul>
     </p>
-    <p>ES6<br>
-      - Introduced significant updates, including:
-      - Classes and inheritance
-      - Arrow functions
-      - Promises for asynchronous programming
-      - Let and const for block-scoped variables
-      - Modules and imports
-      - Spread and rest operators
-      - Destructuring assignment
+
+    <h2>ES5</h2>
+    <p class="para">
+      <ul>
+        <li>Introduced major updates, including:</li>
+        <li>Strict mode for better error handling.</li>
+        <li>JSON support.</li>
+        <li>Array and Object methods (e.g., forEach, map, filter).</li>
+        <li>Property getters and setters.</li>
+      </ul>
+    </p>
+
+    <h2>ES6</h2>
+    <p class="para">
+      <ul>
+        <li>Introduced significant updates, including:</li>
+        <li>Classes and inheritance.</li>
+        <li>Arrow functions.</li>
+        <li>Promises for asynchronous programming.</li>
+        <li>Let and const for block-scoped variables.</li>
+        <li>Modules and imports.</li>
+        <li>Spread and rest operators.</li>
+        <li>Destructuring assignment.</li>
+      </ul>
     </p>
   </section>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

@@ -8,73 +8,142 @@
     <style>
         body{
             background-color: black;
-            color: white;
+            color: rgb(255, 255, 255);
         }
+        .navbar {
+      background-color: #000;
+      border-bottom: 1px solid #fff;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 0 10px;
+    }
+
+    .nav-link:hover {
+      color: #888 !important;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #fff;
+    }
         .but{
             border-radius: 8px;
             box-shadow: darkgoldenrod;
             color: black;
-            background-color: chocolate;
+            background-color: rgb(255, 255, 255);
         }
+        #container {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  background-color: #000000;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#gret {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Optional: add some responsiveness */
+@media only screen and (max-width: 768px) {
+  #container {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin: 20px auto;
+  }
+}
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Assignment</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">day1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="variableDay2.html">day 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Day3.html">day 3 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="day4.html">day 4</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="day5.html">day 5 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="day6.html">day 6</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="day7.html">day 7</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="day.8.html">day 8</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">day 9 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">day 10 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">day 11 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">day 12 </a>
-              </li>
-            </ul>
-    
-          </div>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Assignment</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Day 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="variableDay2.html">Day 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Day3.html">Day 3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="day4.html">Day 4</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="day5.html">Day 5</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="day6.html">Day 6</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="day7.html">Day 7</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="day.8.html">Day 8</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="day9.html">Day 9</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="day10.html">Day 10</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Day 11</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Day 12</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
       <h1>Password Generator</h1>
     <button id="addbutton" class="but">password</button>
     <ul id="ul"></ul>
+    <div id="container">
+      <p id="gret"> <pre>
+        let  store = "01234567890abcdefghijklmnopqrstuvwsyz!@#$%&*_-"
+
+function display() {
+    let password = ""
+
+    for(let h = 0; h<15; h++){
+        let index = Math.round(Math.random()*16)
+        password += store[index]
+       
+     }
+     ul.innerHTML += `<li>${password}</li>`
+}
+AddButton.addEventListener("click", display)
+      </pre></p>
+    </div>
     <script src="day.8.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
