@@ -17,6 +17,39 @@
             height: 100vh;
             text-align: center;
             font-family: 'Arial', sans-serif;
+            margin: 0; /* Remove default body margin */
+            padding-top: 56px; /* Add padding to prevent content from hiding under the navbar */
+        }
+
+        .navbar {
+            background-color: #000;
+            border-bottom: 1px solid #fff;
+            position: fixed; /* Keeps the navbar fixed at the top */
+            top: 0; /* Aligns the navbar at the top */
+            left: 0; /* Aligns the navbar at the left */
+            width: 100%; /* Ensures the navbar spans the full width */
+            z-index: 1000; /* Keeps the navbar above other content */
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 0 10px;
+        }
+
+        .nav-link:hover {
+            color: #888 !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
         }
 
         #stopwatch {
@@ -48,7 +81,7 @@
             border: none;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
-            margin: 5px; /* Added margin for spacing */
+            margin: 5px;
         }
 
         button:hover {
@@ -64,14 +97,69 @@
 </head>
 
 <body>
-    <div id="stopwatch">00:00</div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Assignment</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">day1</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="variableDay2.html">day 2</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Day3.html">day 3 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="day4.html">day 4</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="day5.html">day 5 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="day6.html">day 6</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="day7.html">day 7</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="day.8.html">day 8</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="day9.html">day 9 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="day10.html">day 10 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="day11.html">day 11 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="day12.html">day 12 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="day13pro.html">day 13 </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="stopwatch"></div>
+
     <div class="button-container">
         <button id="startButton">Start</button>
+        <button id="stop">Stop</button>
     </div>
 
-    <script src="day12.js">
-        
-    </script>
+    <script src="day12.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .phone {
+            width: 375px;
+            height: 667px;
+            background-color: #05c836;
+            border-radius: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+        #forimg, #forform, #confirm-page, #time, #pay {
+            visibility: hidden;
+            position: absolute;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .container {
+            width: 300px;
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            visibility: hidden;
+            position: absolute;
+            margin-top: 20px; 
+        }
+        .header {
+            background-color: #05c836;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+        }
+        .fare-details p {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .fare-details hr {
+            border: 1px solid #ccc;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            background-color: #05c836;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone">
+        <div id="forimg">
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image" width="300" height="200">
+        </div>
+
+        <div id="forform" style="visibility: visible;">
+            <form id="form">
+                <label for="fromwhere">From:</label>
+                <input type="text" id="fromwhere" name="fromwhere" required><br><br>
+
+                <label for="towhere">To:</label>
+                <input type="text" id="towhere" name="towhere" required><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="confirm-page">
+            <p id="detail"></p>
+            <button id="cancel">Cancel</button>
+            <button id="start">Start</button>
+        </div>
+
+        <div id="time">
+            <div id="stopwatch"></div>
+            <div class="button">
+                <button id="startButton">Start</button>
+                <button id="stop">Stop</button>
+            </div>
+        </div>
+
+        <div id="pay">
+            <p id="paydet"></p>
+            <button id="gen">Generate payment</button>
+        </div>
+
+        <div class="container">
+            <!-- This container will be populated dynamically -->
+        </div>
+    </div>
+
+    <script src="day13.js"></script>
+
+</body>
+</html>
