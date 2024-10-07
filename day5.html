@@ -94,6 +94,9 @@
           <li class="nav-item">
             <a class="nav-link" href="day13pro.html">DAY13</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="day14.html">DAY14</a>
+          </li>
         </ul>
 
       </div>
@@ -103,20 +106,11 @@
   <div id="container">
     <p id="gret">
     <pre>let getCorrectDate = new Date ()
-
-      console.log(getCorrectDate.getFullYear());
-      console.log(getCorrectDate.getMonth()+1);
-      console.log(getCorrectDate.getDate());
-      console.log(getCorrectDate.getDay()+1);
-      console.log(getCorrectDate.getMinutes());
-      console.log(getCorrectDate.getSeconds());
-      console.log(getCorrectDate.getMilliseconds());
-      
       
       let greeting = document.getElementById("greet")
       let yourname = prompt("what is your name")
       
-      if(getCorrectDate.getHours() <= 12){
+      if(getCorrectDate.getHours() >= 12){
          greeting.innerText = `Good afternoon ${yourname.toUpperCase()}`
       }
       else if (getCorrectDate.getHours()<=12) {

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .navbar {
+            background-color: #000;
+            border-bottom: 1px solid #fff;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 0 10px;
+        }
+
+        .nav-link:hover {
+            color: #888 !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .phone {
+            width: 375px;
+            height: 667px;
+            background-color: #03051d;
+            border-radius: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            margin: 20px auto;
+            margin-top: 20px;
+        }
+
+        #firstpage {
+            font-size: larger;
+            font-weight: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            color: rgb(140, 140, 11);
+        }
+
+        #forform {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        #fullname,
+        #lastname {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #cef509;
+            border-radius: 10px;
+            color: #000000;
+            background-color: none;
+        }
+
+        .butto {
+            padding: 10px 15px;
+            background-color: #0f0531;
+            color: rgb(208, 255, 0);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+
+        }
+
+        button:hover {
+            background-color: #1c1c1b;
+        }
+
+        label {
+            color: #f7ff11;
+        }
+
+        .text-1 {
+            text-align: center;
+            color: #f7ff11;
+        }
+
+        .text-2 {
+            text-align: center;
+            color: #000000;
+            background-color: yellow;
+            border: 1px solid yellow;
+            border-radius: 10px;
+            font-size: larger;
+        }
+
+        #names {
+            border: 1px solid yellow;
+            background-color: yellow;
+            padding: 10px;
+            font: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+            font-size: large;
+            text-align: center;
+        }
+
+        #free-acc {
+            background-color: #03051d;
+            color: yellow;
+            padding: 10px;
+            border-radius: 10px;
+            width: 75%;
+        }
+
+        #hotel-acc {
+            background-color: #03051d;
+            color: yellow;
+            padding: 10px;
+            border-radius: 10px;
+            width: 75%;
+        }
+
+        #acc-type {
+            background-color: #cef509;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #freedetails {
+            text-align: center;
+            color: yellow;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .cl3 {
+            color: rgb(0, 0, 0);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+        }
+
+        #rooms {
+            border: 1px solid yellow;
+            background-color: rgb(195, 255, 0);
+            padding: 10px;
+            font: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+        }
+
+        #wee {
+            color: black;
+        }
+
+        #name {
+            border: 1px solid yellow;
+            background-color: yellow;
+            padding: 10px;
+            font: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+            font-size: large;
+            text-align: center;
+        }
+
+        #departure {
+            border: 1px solid yellow;
+            background-color: yellow;
+            padding: 10px;
+            font: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+            color: #000;
+        }
+
+        .h14 {
+            color: #cef509;
+        }
+
+        h3 {
+            color: #cef509;
+        }
+
+        #daysin {
+            text-align: center;
+        }
+
+        #standarddetails {
+            color: yellow;
+            text-align: center;
+            align-items: center;
+        }
+
+        .buu {
+            border: 1px solid yellow;
+            background-color: yellow;
+            color: rgb(8, 3, 27);
+            border-radius: 5px;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            justify-content: center;
+            /* padding-left: 60px; */
+            margin-left: 90px;
+        }
+
+        .hoteldetails {
+            color: yellow;
+            text-align: center;
+            align-items: center;
+        }
+
+        #due {
+            border: 1px solid yellow;
+            border-radius: 10px;
+            color: #000000;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+            background-color: yellow;
+            padding: 10px;
+
+        }
+
+        #duetime {
+            color: #000000;
+           
+        }
+
+        #p2p {
+            font-size: larger;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Assignment</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Day 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="variableDay2.html">Day 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Day3.html">Day 3</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="day4.html">Day 4</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="day5.html">Day 5</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="day6.html">Day 6</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="day7.html">Day 7</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="day.8.html">Day 8</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="day9.html">Day 9</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="day10.html">Day 10</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="day11.html">Day 11</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="day12.html">Day 12</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="day13pro.html">day 13 </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="phone">
+        <div id="firstpage">
+            <h1>Accomodations Reservation</h1>
+        </div>
+        <div id="forform">
+            <h1 class="text-1">WELCOME</h1>
+            <P class="text-2">
+                Provide your name
+            </P>
+            <form id="form">
+                <label for="fullname">First name:</label>
+                <input type="text" id="fullname" name="Firstname" required><br><br>
+
+                <label for="lastname">Last name:</label>
+                <input type="text" id="lastname" name="Lastname" required><br><br>
+
+                <button type="submit" class="butto">Next</button>
+            </form>
+        </div>
+        <div id="acc" style="visibility: hidden; position: absolute;">
+            <h1 id="names"></h1>
+            <div id="acc-type">
+                <h3 id="wee">Types of Accomodation</h3>
+                <button id="free-acc">Free Acc</button><br><br>
+                <button id="hotel-acc">Hotel Acc</button>
+            </div>
+        </div>
+        <div id="freedetails"></div>
+        <div id="room-type" style="visibility: hidden; position: absolute;">
+            <h1 id="name"></h1>
+            <div id="rooms">
+                <h3 class="cl3">Select room type</h3>
+                <button id="standardroom" class="butto">Standard - #5000</button><br><br>
+                <button id="emerald" class="butto">Emerald - #15,000</button><br><br>
+                <button id="supreme" class="butto">Supreme - #25,000</button><br><br>
+                <button id="presidential" class="butto">Presidential - #40,000</button>
+            </div>
+            <div id="daysin">
+                <h3 class="hl4">How many days</h3><br>
+                <input type="date" id="departure">
+                <!-- <p ></p> -->
+                <h3 id="alart" class="h14"></h3>
+            </div>
+        </div>
+        <div id="firstpick" style="visibility: hidden; position: absolute;">
+            <h2 id="standarddetails" class="hoteldetails"></h2>
+            <button id="cancel1" class="buu">Cancel</button><br><br>
+            <button id="continue1" class="buu">continue</button>
+        </div>
+
+        <div id="secondpick" style="visibility: hidden; position: absolute;">
+            <h2 id="emralddetails" class="hoteldetails"></h2>
+            <button id="cancel2" class="buu">Cancel</button><br><br>
+            <button id="continue2" class="buu">continue</button>
+        </div>
+        <div id="thirdpick" style="visibility: hidden; position: absolute;">
+            <h2 id="supremedetails" class="hoteldetails"></h2>
+            <button id="cancel3" class="buu">Cancel</button><br><br>
+            <button id="continue3" class="buu">continue</button>
+        </div>
+        <div id="fourthpick" style="visibility: hidden; position: absolute;">
+            <h2 id="presidentialdetails" class="hoteldetails"></h2>
+            <button id="cancel4" class="buu">Cancel</button><br><br>
+            <button id="continue4" class="buu">continue</button>
+        </div>
+        <div id="due" style="visibility: hidden; position: absolute;">
+            <p id="p2p">Your rent expires in:
+            <p><br>
+            <h1 id="duetime"></h1>
+        </div>
+    </div>
+    <script src="day14.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -57,17 +57,19 @@ myform.addEventListener("submit", (event) => {
 let startbutton = document.getElementById("startButton")
 let stopButton = document.getElementById("stop")
 let count = document.getElementById("stopwatch")
+let contibutton = document.getElementById("continue")
+
 start = 0
 let timeinsecconds = start * 60 * 60
 
 function decrease() {
-    timeinsecconds ++
-    let hrs = Math.floor(timeinsecconds / ( 60 * 60))
+    timeinsecconds++
+    let hrs = Math.floor(timeinsecconds / (60 * 60))
     let min = Math.floor((timeinsecconds % (60 * 60)) / 60)
     let sec = Math.floor(timeinsecconds % 60)
     console.log(`${min} min: ${sec} sec`);
 
-    if(sec < 10){
+    if (sec < 10) {
         sec = `0${sec}`
     }
     if (min < 10) {
@@ -75,18 +77,31 @@ function decrease() {
     }
     count.innerText = `Ride in progress......${min}: ${sec} You are now moving from Bodija to Challenge`
 }
-startbutt.addEventListener("click", () => {
-    Object.assign(confirmPage.style, hideStyle)
-    Object.assign(time.style, showStyle)
-    call();
-})
 
 function call() {
-    decrease = setInterval(decrease, 1000); 
+    let timestop = setInterval(() => {
+        decrease()
+
+        Object.assign(confirmPage.style, hideStyle)
+        Object.assign(contibutton.style, hideStyle)
+        Object.assign(time.style, showStyle)
+
+    }, 1000);
+
+    // Object.assign(stopButton.style, showStyle)
+    Object.assign(contibutton.style, hideStyle)
+
+    stopButton.addEventListener("click", () => {
+        Object.assign(contibutton.style, showStyle)
+        Object.assign(stopButton.style, hideStyle)
+        clearInterval(timestop);
+    });
 }
-stopButton.addEventListener("click", () => {
-    clearInterval(decrease);  
-});
+
+startbutt.addEventListener("click", call)
+
+contibutton.addEventListener("click", call)
+
 let pay = document.getElementById("pay")
 let paydet = document.getElementById("paydet")
 let gen = document.getElementById("gen")
@@ -96,13 +111,14 @@ function end() {
 }
 
 
-startbutton.addEventListener("click",()=>{
+startbutton.addEventListener("click", () => {
     Object.assign(time.style, hideStyle)
+    Object.assign(contibutton.style, hideStyle)
     Object.assign(pay.style, showStyle)
     end()
 });
 
-let conta =  document.querySelector(".container")
+let conta = document.querySelector(".container")
 
 function rec() {
     conta.innerHTML = `
@@ -127,7 +143,7 @@ function rec() {
         </div>`
 }
 
-gen.addEventListener("click", ()=>{
+gen.addEventListener("click", () => {
     Object.assign(pay.style, hideStyle)
     Object.assign(conta.style, showStyle)
     rec();

@@ -7,7 +7,8 @@ function display() {
     let password = ""
 
     for(let h = 0; h<15; h++){
-        let index = Math.round(Math.random()*16)
+        let lastIndex = store.length - 1
+        let index = Math.round(Math.random()* lastIndex)
         password += store[index]
        
      }

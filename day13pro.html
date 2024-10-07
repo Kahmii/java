@@ -84,6 +84,7 @@
             cursor: pointer;
             width: 100%;
             border-radius: 5px;
+        
         }
 
         button:hover {
@@ -163,7 +164,10 @@
             font-size: 16px;
             cursor: pointer;
         }
-
+        #but{
+            display: flex;
+            gap: 5px;
+        }
         .button-container button:hover {
             background-color: #04a828;
         }
@@ -219,6 +223,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="day13pro.html">day 13 </a>
                       </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="day14.html">day 14 </a>
+                      </li>
                 </ul>
             </div>
         </div>
@@ -249,8 +256,12 @@
             <div id="stopwatch"></div>
 
             <div class="button">
-                <button id="startButton">stop ride</button>
-                <button id="stop">pause</button>
+
+                <div id="but">
+                    <button id="stop">pause</button>
+                    <button id="continue">continue</button>
+                    <button id="startButton" >stop ride</button>
+                </div>   
             </div>
         </div>
         <div id="pay" style="visibility: hidden; position: absolute;">
@@ -258,7 +269,35 @@
             <button id="gen">Generate payment</button>
         </div>
         <div class="container">
-            <!-- Content can be added here -->
+            <div class="header">
+                <h2>Ride has Ended</h2>
+                <div class="icon">✔️</div>
+            </div>
+            <div class="content">
+            </div>
+        </div>`
+        </div>
+        <div id="paymentportal">
+            <tr>
+                <td>Base Fare</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Time Fare</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Initial Total</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td></td>
+            </tr>
         </div>
     </div>
 

@@ -79,3 +79,12 @@ console.log(arr)
 //    console.log(sum);
 // }
 // allnums(3,5,6,7,8,3,6,2,8,3,3,56,23)
+
+let answer = document.getElementById("answer")
+let button = document.getElementById("buton")
+let store = document.getElementById("storerage")
+
+button.addEventListener("click",()=>{
+  store.innerHTML = `${newarr} \n ${arr}`
+
+})

@@ -121,7 +121,10 @@
             <a class="nav-link" href="day12.html">DAY12</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="day13pro.html">DAY3 </a>
+            <a class="nav-link" href="day13pro.html">DAY13 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="day14.html">DAY14 </a>
           </li>
         </ul>
       </div>
@@ -133,17 +136,14 @@
     <div id="container">
       <p id="gret"> <pre>
         let  store = "01234567890abcdefghijklmnopqrstuvwsyz!@#$%&*_-"
-
-function display() {
-    let password = ""
-
-    for(let h = 0; h<15; h++){
-        let index = Math.round(Math.random()*16)
-        password += store[index]
-       
-     }
-     ul.innerHTML += `<li>${password}</li>`
-}
+        for(let h = 0; h<15; h++){
+          let lastIndex = store.length - 1
+          let index = Math.round(Math.random()* lastIndex)
+          password += store[index]
+         
+       }
+       ul.innerHTML += `<li>${password}</li>`
+  }
 AddButton.addEventListener("click", display)
       </pre></p>
     </div>
