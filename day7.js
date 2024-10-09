@@ -10,17 +10,17 @@ function playGame() {
     if (player == numberToGuess) {
         result.textContent = "Congratulations! You guessed the number!";
     }
-    else if (player < 10) {
+    else if (player < numberToGuess) {
         result.textContent = "A little bit higher almost there!! try again"
     }
-    else if (player > 10) {
-        result.textContent = "wrong input"
-    }
-    else{
+    else if (player > numberToGuess) {
         result.textContent = "A little bit lower almost there!! try again"
     }
+    else{
+        result.textContent = "Wtong"
+    }
 }
-// console.log(numberToGuess)
+console.log(numberToGuess)
 
 
 let cont = document.getElementById("t0List")
