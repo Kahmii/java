@@ -20,6 +20,10 @@ let hideStyle = {
     visibility: "hidden",
     position: "absolute"
 }
+cancel.addEventListener("click",()=>{
+    Object.assign(forform.style, showStyle)
+    Object.assign(confirmPage.style, hideStyle)
+})
 setTimeout(() => {
     Object.assign(forimg.style, hideStyle)
     Object.assign(forform.style, showStyle)
@@ -53,7 +57,7 @@ myform.addEventListener("submit", (event) => {
 //     Object.assign(confirmPage.style, hideStyle)
 //     Object.assign(forform.style, showStyle)
 // })
-
+//time
 let startbutton = document.getElementById("startButton")
 let stopButton = document.getElementById("stop")
 let count = document.getElementById("stopwatch")
@@ -75,7 +79,7 @@ function decrease() {
     if (min < 10) {
         min = `0${min}`
     }
-    count.innerText = `Ride in progress......${min}: ${sec} You are now moving from Bodija to Challenge`
+    count.innerText = `Ride in progress......${min}: ${sec} You are now moving from ${fromWhere.value} to ${toWhere.value}`
 }
 
 function call() {
@@ -96,11 +100,16 @@ function call() {
         Object.assign(stopButton.style, hideStyle)
         clearInterval(timestop);
     });
+    contibutton.addEventListener("click",()=>{
+        Object.assign(stopButton.style, showStyle)
+        Object.assign(contibutton.style, hideStyle)
+    })
 }
 
 startbutt.addEventListener("click", call)
 
 contibutton.addEventListener("click", call)
+
 
 let pay = document.getElementById("pay")
 let paydet = document.getElementById("paydet")
@@ -112,9 +121,9 @@ function end() {
 
 
 startbutton.addEventListener("click", () => {
-    Object.assign(time.style, hideStyle)
-    Object.assign(contibutton.style, hideStyle)
     Object.assign(pay.style, showStyle)
+    Object.assign(time.style,hideStyle)
+    Object.assign(contibutton.style,hideStyle)
     end()
 });
 

@@ -40,7 +40,7 @@
         }
 
         .cont {
-            max-width: 900px;
+            max-width: 1300px;
             margin: 40px auto;
             padding: 30px;
             background-color: #fff;
@@ -64,7 +64,15 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
+        #man{
+            flex: 1 1 300px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
         .calc-container h2 {
             margin-bottom: 20px;
             font-weight: bold;
@@ -100,8 +108,16 @@
             background-color: #000;
             color: #fff;
             cursor: pointer;
+          
         }
-
+        #retire-man{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
         .button:hover {
             background-color: #333;
         }
@@ -228,6 +244,13 @@
                     <button id="loa" onclick="invest()" class="button">Calculate</button>
                 </div>
                 <h3 id="ok" class="output"></h3>
+            </div>
+            <!-- retirement Calculator -->
+            <div id="man">
+                <label>Year Of Birth:</label><br>
+                <input type="number" id="age"><br><br>
+                <button id="retire-man">Calculate</button>
+                <p id="inputed-age"></p>
             </div>
         </div>
     </div>
